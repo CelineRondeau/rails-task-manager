@@ -4,4 +4,7 @@ Rails.application.routes.draw do
 
   # view all tasks
   get "/tasks", to: "tasks#index", as: :tasks
+
+  # view details of a specific restaurant
+  get "/tasks/:id", to: "tasks#show", as: :task
 end
