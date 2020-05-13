@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :set_task, only: [ :show, :edit, :update, :destroy ]
+  
   def index
     # Get all tasks from the DB & send them to view
     @tasks = Task.all # an array of Task instances
@@ -6,7 +8,7 @@ class TasksController < ApplicationController
 
   def show
     # GET /tasks/:id
-    Task.find(params[:id])
+    # Task.find(params[:id])
   end
   
   def new
